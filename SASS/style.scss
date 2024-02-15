@@ -1,0 +1,124 @@
+/******VARIABLES*****/
+
+$MainColor: #9356DC;
+$SecondColor: #FF79DA;
+$ThirdColor: #99E2D0; 
+$GreyColor: #EAEAEA;
+
+/*****GENERAL*****/
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+    position: sticky;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5em;
+    background-color: $GreyColor;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+    .Txt {
+        color: #353535;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0.5em;
+    background-color: whitesmoke;
+    text-align: center;
+    .introTitle {
+        padding-left: 70px;
+        padding-right: 70px;
+        margin-bottom: 10px;
+    }
+    .introTxt {
+        margin-top: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-weight: 300;
+    }
+    .mainButtonPurple {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+        color: white;
+        margin: 1em auto 2.5em;
+        width: 60%;
+        height: 50px;
+        box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+    }
+}
+
+.function {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em 1em 3em;
+    .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 20px;
+    }
+    .functionCard{
+        display: flex;
+        align-items: center;
+        background-color: #F6F6F6;
+        gap: 2em;
+        border-radius: 20px;
+        width: 100%;
+        height: 70px;
+        box-shadow: rgba(50, 50, 93, 0) 0px 5px 10px 0px, rgba(0, 0, 0, 0.2) -1px 5px 15px; 
+    }
+    .cardNumber {
+        color: white;
+        background-color: #9356dc;
+        border-radius: 50%;
+        width: 1.5em;
+        height: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 1.5em;
+    }
+    .cardIcon {
+        margin-left: 3em;
+    }
+    .cardTxt {
+        font-weight: 500;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
