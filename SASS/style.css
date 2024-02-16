@@ -8,6 +8,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -15,6 +20,93 @@ body {
   height: 4em;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
   position: sticky;
+  z-index: 2;
+}
+
+.headerBack {
+  display: flex;
+  justify-content: center;
+  height: 4em;
+  align-items: center;
+}
+.headerBack .arrow {
+  position: absolute;
+  margin-right: 22em;
+}
+
+.backImg {
+  width: 100%;
+  max-height: 30em;
+  object-fit: cover;
+}
+
+.restosName {
+  width: auto;
+  background-color: whitesmoke;
+  padding: 1em;
+  position: relative;
+  border-radius: 3em 3em 0 0;
+  margin-top: -4em;
+}
+.restosName .restosHead {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+.restosName .allMenu {
+  display: grid;
+  gap: 3em;
+}
+.restosName .menuBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.restosName .menuTitle {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid #99E2D0;
+  width: 10%;
+}
+.restosName .menuChoices {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 0.7em;
+}
+.restosName .dishesCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restosName .dishesName {
+  margin: 2px;
+  font-weight: 500;
+}
+.restosName .dishesSpec {
+  margin: 2px;
+  font-weight: 300;
+}
+.restosName .dishesPrice {
+  font-weight: 700;
+}
+.restosName .mainButtonPurple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  margin: 3em auto;
+  width: 60%;
+  height: 50px;
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+.restosName .mainButtonPurple:hover {
+  filter: brightness(1.1);
+  transition: 0.3s;
 }
 
 .location {
@@ -63,6 +155,10 @@ body {
   height: 50px;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
 }
+.intro .mainButtonPurple:hover {
+  filter: brightness(1.1);
+  transition: 0.3s;
+}
 
 .function {
   display: flex;
@@ -98,8 +194,67 @@ body {
   left: 1.5em;
 }
 .function .cardIcon {
-  margin-left: 3em;
+  margin-left: 2em;
 }
 .function .cardTxt {
   font-weight: 500;
+}
+
+.restos {
+  padding: 2.5em 1em;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restos .restosTitle {
+  margin-bottom: 0;
+}
+.restos .restosList {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+}
+.restos .restosList a {
+  position: relative;
+}
+.restos .restosCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restos .tag {
+  background-color: #a9e0d1;
+  color: #3b8468;
+  position: absolute;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  font-weight: 500;
+  bottom: 13em;
+  right: 0.8em;
+}
+.restos .restosInfos {
+  padding: 1em;
+}
+.restos .restosTxt {
+  margin: 0;
+}
+
+footer {
+  padding: 1em 1.5em;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+footer .footerTitle {
+  font-family: "Shrikhand", serif;
+  font-weight: 300;
+}
+footer .footerLink {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
