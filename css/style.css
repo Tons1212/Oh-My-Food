@@ -1,26 +1,10 @@
 /******VARIABLES*****/
-/*****GENERAL*****/
-body {
-  margin: 0;
-}
-
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 4em;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-  position: sticky;
-  z-index: 2;
 }
 
 .headerBack {
@@ -32,81 +16,6 @@ a {
 .headerBack .arrow {
   position: absolute;
   margin-right: 22em;
-}
-
-.backImg {
-  width: 100%;
-  max-height: 30em;
-  object-fit: cover;
-}
-
-.restosName {
-  width: auto;
-  background-color: whitesmoke;
-  padding: 1em;
-  position: relative;
-  border-radius: 3em 3em 0 0;
-  margin-top: -4em;
-}
-.restosName .restosHead {
-  font-family: "Shrikhand", serif;
-  font-size: 28px;
-  margin-top: 1em;
-  margin-bottom: 1.5em;
-}
-.restosName .allMenu {
-  display: grid;
-  gap: 3em;
-}
-.restosName .menuBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8em;
-}
-.restosName .menuTitle {
-  font-size: 16px;
-  font-weight: 300;
-  padding-bottom: 0.5em;
-  border-bottom: 3px solid #99E2D0;
-  width: 10%;
-}
-.restosName .menuChoices {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 0.7em;
-}
-.restosName .dishesCard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.restosName .dishesName {
-  margin: 2px;
-  font-weight: 500;
-}
-.restosName .dishesSpec {
-  margin: 2px;
-  font-weight: 300;
-}
-.restosName .dishesPrice {
-  font-weight: 700;
-}
-.restosName .mainButtonPurple {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
-  color: white;
-  margin: 3em auto;
-  width: 60%;
-  height: 50px;
-  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-}
-.restosName .mainButtonPurple:hover {
-  filter: brightness(1.1);
-  transition: 0.3s;
 }
 
 .location {
@@ -196,6 +105,12 @@ a {
 .function .cardIcon {
   margin-left: 2em;
 }
+.function .iconGrey {
+  color: #7e7e7e;
+}
+.function .iconPurple {
+  color: #9356DC;
+}
 .function .cardTxt {
   font-weight: 500;
 }
@@ -214,6 +129,12 @@ a {
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+}
+.restos .restosdetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1em;
 }
 .restos .restosList a {
   position: relative;
@@ -241,6 +162,84 @@ a {
   margin: 0;
 }
 
+.backImg {
+  width: 100%;
+  max-height: 30em;
+  object-fit: cover;
+}
+
+.restosName {
+  width: auto;
+  background-color: whitesmoke;
+  padding: 1em;
+  position: relative;
+  border-radius: 3em 3em 0 0;
+  margin-top: -4em;
+}
+.restosName .restosHead {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1em;
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+.restosName .allMenu {
+  display: grid;
+  gap: 3em;
+}
+.restosName .menuBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.restosName .menuTitle {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid #99E2D0;
+  width: 10%;
+}
+.restosName .menuChoices {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 0.7em;
+}
+.restosName .dishesCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restosName .dishesName {
+  margin: 2px;
+  font-weight: 500;
+}
+.restosName .dishesSpec {
+  margin: 2px;
+  font-weight: 300;
+}
+.restosName .dishesPrice {
+  font-weight: 700;
+}
+.restosName .mainButtonPurple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  margin: 3em auto;
+  width: 60%;
+  height: 50px;
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+.restosName .mainButtonPurple:hover {
+  filter: brightness(1.1);
+  transition: 0.3s;
+}
+
 footer {
   padding: 1em 1.5em;
   background-color: #353535;
@@ -257,4 +256,24 @@ footer .footerLink {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+footer .iconWhite {
+  color: white;
+  margin-right: 5px;
+}
+
+/*****GENERAL*****/
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
