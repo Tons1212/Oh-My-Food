@@ -140,4 +140,17 @@
     .restosTxt {
         margin: 0;  
     }
+    i {
+        position: absolute;
+        right: 1em;  
+      }
+    .filledHeart {
+        color: linear-gradient(#9356DC, #FF79DA);
+        background-clip: text;
+        -webkit-background-clip: text;
+        
+    }
+    .heartIcon:hover .filledHeart {
+        opacity: 1;
+    }
 }

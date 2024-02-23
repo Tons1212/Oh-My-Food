@@ -161,6 +161,18 @@
 .restos .restosTxt {
   margin: 0;
 }
+.restos i {
+  position: absolute;
+  right: 1em;
+}
+.restos .filledHeart {
+  color: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.restos .heartIcon:hover .filledHeart {
+  opacity: 1;
+}
 
 .backImg {
   width: 100%;
@@ -207,21 +219,48 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 0.7em;
 }
+.restosName .menuChoices:hover .menuSelect {
+  opacity: 100%;
+  width: 55px;
+}
 .restosName .dishesCard {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .restosName .dishesName {
   margin: 2px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restosName .dishesSpec {
   margin: 2px;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restosName .dishesPrice {
   font-weight: 700;
+}
+.restosName .menuSelect {
+  background-color: #99E2D0;
+  width: 0;
+  opacity: 0;
+  height: auto;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -11px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.restosName .iconCheck {
+  background-color: white;
+  border-radius: 15px;
+  color: #99E2D0;
+  display: inline-block;
 }
 .restosName .mainButtonPurple {
   display: flex;
