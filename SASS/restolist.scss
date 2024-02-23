@@ -145,12 +145,15 @@
         right: 1em;  
       }
     .filledHeart {
-        color: linear-gradient(#9356DC, #FF79DA);
+        color: transparent;
+        background-image: linear-gradient(#9356DC, #FF79DA);
         background-clip: text;
         -webkit-background-clip: text;
-        
+        opacity: 0;
+        height: 100%;
+        transition: all 300ms ease;
     }
-    .heartIcon:hover .filledHeart {
+    .filledHeart:hover {
         opacity: 1;
     }
 }
