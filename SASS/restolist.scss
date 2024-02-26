@@ -1,3 +1,28 @@
+/*****LOADER*****/
+
+.loaderWrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    background-color: white;
+    animation: fadeout 2s forwards;
+    .loader {
+        position: fixed;        
+        top: 35%;
+        transform: translateY(-50%);
+        animation: loader 1s infinite ease-out;
+    }
+    img {
+        height: 250px;
+    }
+}
+
+
+/*****LOCATION*****/
+
 .location {
     display: flex;
     justify-content: center;
@@ -14,12 +39,15 @@
     }
 }
 
+/*****INTRO*****/
+
 .intro {
     display: flex;
     flex-direction: column;
     padding: 1em 0.5em;
     background-color: whitesmoke;
     text-align: center;
+    animation: fadein 1.5s both 500ms;
     .introTitle {
         padding-left: 70px;
         padding-right: 70px;
@@ -42,6 +70,7 @@
         width: 60%;
         height: 50px;
         box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+        animation: fadein 1.5s both 600ms;
     }
     .mainButtonPurple:hover {
         filter: brightness(1.1);
@@ -49,10 +78,13 @@
     }
 }
 
+/*****FONCTIONALITE*****/
+
 .function {
     display: flex;
     flex-direction: column;
     padding: 2.5em 1em 3em;
+    animation: appear 1.5s both 800ms;
     .steps {
         display: flex;
         flex-direction: column;
@@ -68,6 +100,7 @@
         width: 100%;
         height: 70px;
         box-shadow: rgba(50, 50, 93, 0) 0px 5px 10px 0px, rgba(0, 0, 0, 0.2) -1px 5px 15px; 
+        animation: appear 1.5s both 900ms;
     }
     .cardNumber {
         color: white;
@@ -79,7 +112,7 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        left: 1.5em;
+        left: -0.8em;
     }
     .cardIcon {
         margin-left: 2em;
@@ -95,6 +128,8 @@
     }
 }
 
+/*****RESTAURANTS*****/
+
 .restos {
     padding: 2.5em 1em;
     background-color: whitesmoke;
@@ -103,20 +138,41 @@
     gap: 20px;
     .restosTitle {
         margin-bottom: 0;
+        animation: appear 2s both 1000ms;
     }
     .restosList {
+        position: relative;
         background-color: white;
         border-radius: 20px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+        animation: appear 2s both 1200ms;
+    }
+    .restosList2 {
+        position: relative;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+        animation: appear 2s both 1300ms;
+    }
+    .restosList3 {
+        position: relative;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+        animation: appear 2s both 1400ms;
+    }
+    .restosList4 {
+        position: relative;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+        animation: appear 2s both 1500ms;
     }
     .restosdetail {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-right: 1em;
-    }
-    .restosList a {
-        position: relative;
     }
     .restosCard img {
         width: 100%;
@@ -131,8 +187,9 @@
         padding: 0.5em 1em;
         border-radius: 0.2em;
         font-weight: 500;
-        bottom: 13em;
+        top: 1em;
         right: 0.8em;
+        animation: tag 500ms 0ms linear alternate infinite both;
     }
     .restosInfos {
         padding: 1em;   
@@ -142,7 +199,9 @@
     }
     i {
         position: absolute;
-        right: 1em;  
+        right: 1em;
+        bottom: 1em;
+        font-size: 25px;  
       }
     .filledHeart {
         color: transparent;
@@ -150,7 +209,6 @@
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
-        height: 100%;
         transition: all 300ms ease;
     }
     .filledHeart:hover {

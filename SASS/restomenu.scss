@@ -1,8 +1,13 @@
+/*****PRESENTATION*****/
+
 .backImg {
     width: 100%;
-    max-height: 30em;
-    object-fit: cover;    
+    max-height: 20em;
+    object-fit: cover;
+    animation: fadein 1.5s both 400ms;    
 }
+
+/*****MENUS*****/
 
 .restosName {
     width: auto;
@@ -19,11 +24,12 @@
         font-size: 28px;
         margin-top: 1em;
         margin-bottom: 1.5em;
+        animation: appear 1.5s both 500ms;
     }
     .heartIcon i {
         position: absolute;
-        right: 1em;
-        top: 1.5em;
+        right: 1.5em;
+        top: 0.2em;
     }
     .filledHeart {
         color: transparent;
@@ -31,8 +37,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
-        height: 100%;
-        transition: all 300ms ease;
+        transition: all 400ms ease;
     }
     .filledHeart:hover {
         opacity: 1;
@@ -44,6 +49,7 @@
     .menuBlock {
         display: flex;
         flex-direction: column;
+        min-width: 0;
         gap: 0.8em;
     }
     .menuTitle {
@@ -52,44 +58,47 @@
         padding-bottom: 0.5em;
         border-bottom: 3px solid #99E2D0;
         width: 10%;
+        animation: appear 1.5s both 800ms;
     }
     .menuChoices {
         background-color: white;
         border-radius: 15px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        padding: 0.7em;
+        animation: slide 1s 1500ms linear both;
     }
     .menuChoices:hover .menuSelect {
         opacity: 1;
         width: 55px;
-        height: auto;
-        margin: -11px;
     }
     .dishesCard {
         display: flex;
-        justify-content: space-between;
     }
     .dishesInfo {
         display: flex;
         flex-direction: column;
+        flex: 1;
+        padding: 0.7em;
     }
     .dishesName {
         margin: 2px;
         font-weight: 500;
         overflow: hidden;
+        white-space: nowrap;
         text-overflow: ellipsis;
     }
     .dishesSpec {
         margin: 2px;
         font-weight: 300;
         overflow: hidden;
+        white-space: nowrap;
         text-overflow: ellipsis;
     }
     .dishesPrice {
         font-weight: 700;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        align-self: flex-end;
+        padding: 0.7em;
+        padding-bottom: 0;
     }
     .menuSelect {
         background-color: $ThirdColor;
@@ -99,12 +108,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        transition: ease-out width 600ms;
     }
     .iconCheck {
-        background-color: $iconWhite;
+        background-color: $ThirdColor;
         border-radius: 50px;
-        color: $ThirdColor;
+        color: $iconWhite;
+        font-size: 20px;
+        transform: rotateZ(360deg);
     }
     .mainButtonPurple {
         display: flex;
@@ -117,6 +128,7 @@
         width: 60%;
         height: 50px;
         box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+        animation: appear 1.5s both 1500ms;
     }
     .mainButtonPurple:hover {
         filter: brightness(1.1);

@@ -1,4 +1,60 @@
 /******VARIABLES*****/
+@keyframes loader {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tag {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+/*****HEADER*****/
+header {
+  animation: fadein 1.5s both 300ms;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -15,9 +71,31 @@
 }
 .headerBack .arrow {
   position: absolute;
-  margin-right: 22em;
+  left: 1.5em;
 }
 
+/*****LOADER*****/
+.loaderWrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+  background-color: white;
+  animation: fadeout 2s forwards;
+}
+.loaderWrap .loader {
+  position: fixed;
+  top: 35%;
+  transform: translateY(-50%);
+  animation: loader 1s infinite ease-out;
+}
+.loaderWrap img {
+  height: 250px;
+}
+
+/*****LOCATION*****/
 .location {
   display: flex;
   justify-content: center;
@@ -34,12 +112,14 @@
   margin-left: 10px;
 }
 
+/*****INTRO*****/
 .intro {
   display: flex;
   flex-direction: column;
   padding: 1em 0.5em;
   background-color: whitesmoke;
   text-align: center;
+  animation: fadein 1.5s both 500ms;
 }
 .intro .introTitle {
   padding-left: 70px;
@@ -63,16 +143,19 @@
   width: 60%;
   height: 50px;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+  animation: fadein 1.5s both 600ms;
 }
 .intro .mainButtonPurple:hover {
   filter: brightness(1.1);
   transition: 0.3s;
 }
 
+/*****FONCTIONALITE*****/
 .function {
   display: flex;
   flex-direction: column;
   padding: 2.5em 1em 3em;
+  animation: appear 1.5s both 800ms;
 }
 .function .steps {
   display: flex;
@@ -89,6 +172,7 @@
   width: 100%;
   height: 70px;
   box-shadow: rgba(50, 50, 93, 0) 0px 5px 10px 0px, rgba(0, 0, 0, 0.2) -1px 5px 15px;
+  animation: appear 1.5s both 900ms;
 }
 .function .cardNumber {
   color: white;
@@ -100,7 +184,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 1.5em;
+  left: -0.8em;
 }
 .function .cardIcon {
   margin-left: 2em;
@@ -115,6 +199,7 @@
   font-weight: 500;
 }
 
+/*****RESTAURANTS*****/
 .restos {
   padding: 2.5em 1em;
   background-color: whitesmoke;
@@ -124,20 +209,41 @@
 }
 .restos .restosTitle {
   margin-bottom: 0;
+  animation: appear 2s both 1000ms;
 }
 .restos .restosList {
+  position: relative;
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+  animation: appear 2s both 1200ms;
+}
+.restos .restosList2 {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+  animation: appear 2s both 1300ms;
+}
+.restos .restosList3 {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+  animation: appear 2s both 1400ms;
+}
+.restos .restosList4 {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
+  animation: appear 2s both 1500ms;
 }
 .restos .restosdetail {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-right: 1em;
-}
-.restos .restosList a {
-  position: relative;
 }
 .restos .restosCard img {
   width: 100%;
@@ -152,8 +258,9 @@
   padding: 0.5em 1em;
   border-radius: 0.2em;
   font-weight: 500;
-  bottom: 13em;
+  top: 1em;
   right: 0.8em;
+  animation: tag 500ms 0ms linear alternate infinite both;
 }
 .restos .restosInfos {
   padding: 1em;
@@ -164,6 +271,8 @@
 .restos i {
   position: absolute;
   right: 1em;
+  bottom: 1em;
+  font-size: 25px;
 }
 .restos .filledHeart {
   color: transparent;
@@ -171,19 +280,21 @@
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  height: 100%;
   transition: all 300ms ease;
 }
 .restos .filledHeart:hover {
   opacity: 1;
 }
 
+/*****PRESENTATION*****/
 .backImg {
   width: 100%;
-  max-height: 30em;
+  max-height: 20em;
   object-fit: cover;
+  animation: fadein 1.5s both 400ms;
 }
 
+/*****MENUS*****/
 .restosName {
   width: auto;
   background-color: whitesmoke;
@@ -200,11 +311,12 @@
   font-size: 28px;
   margin-top: 1em;
   margin-bottom: 1.5em;
+  animation: appear 1.5s both 500ms;
 }
 .restosName .heartIcon i {
   position: absolute;
-  right: 1em;
-  top: 1.5em;
+  right: 1.5em;
+  top: 0.2em;
 }
 .restosName .filledHeart {
   color: transparent;
@@ -212,8 +324,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  height: 100%;
-  transition: all 300ms ease;
+  transition: all 400ms ease;
 }
 .restosName .filledHeart:hover {
   opacity: 1;
@@ -225,6 +336,7 @@
 .restosName .menuBlock {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   gap: 0.8em;
 }
 .restosName .menuTitle {
@@ -233,44 +345,47 @@
   padding-bottom: 0.5em;
   border-bottom: 3px solid #99E2D0;
   width: 10%;
+  animation: appear 1.5s both 800ms;
 }
 .restosName .menuChoices {
   background-color: white;
   border-radius: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 0.7em;
+  animation: slide 1s 1500ms linear both;
 }
 .restosName .menuChoices:hover .menuSelect {
   opacity: 1;
   width: 55px;
-  height: auto;
-  margin: -11px;
 }
 .restosName .dishesCard {
   display: flex;
-  justify-content: space-between;
 }
 .restosName .dishesInfo {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  padding: 0.7em;
 }
 .restosName .dishesName {
   margin: 2px;
   font-weight: 500;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .restosName .dishesSpec {
   margin: 2px;
   font-weight: 300;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .restosName .dishesPrice {
   font-weight: 700;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  align-self: flex-end;
+  padding: 0.7em;
+  padding-bottom: 0;
 }
 .restosName .menuSelect {
   background-color: #99E2D0;
@@ -280,12 +395,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: ease-out width 600ms;
 }
 .restosName .iconCheck {
-  background-color: white;
+  background-color: #99E2D0;
   border-radius: 50px;
-  color: #99E2D0;
+  color: white;
+  font-size: 20px;
+  transform: rotateZ(360deg);
 }
 .restosName .mainButtonPurple {
   display: flex;
@@ -298,18 +415,21 @@
   width: 60%;
   height: 50px;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+  animation: appear 1.5s both 1500ms;
 }
 .restosName .mainButtonPurple:hover {
   filter: brightness(1.1);
   transition: 0.3s;
 }
 
+/*****FOOTER*****/
 footer {
   padding: 1em 1.5em;
   background-color: #353535;
   color: white;
   display: flex;
   flex-direction: column;
+  animation: fadein 1.5s both 2s;
 }
 footer .footerTitle {
   font-family: "Shrikhand", serif;

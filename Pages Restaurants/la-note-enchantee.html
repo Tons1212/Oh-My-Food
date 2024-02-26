@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La palette du goût</title>
+    <title>La note enchantée</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <div class="loaderWrap">
+        <div class="loader">
+            <img src="../images/Loader/restaurant.png">
+        </div>
+    </div>
     <header>
         <div class="headerBack">
-            <a href="index.html" class="arrow">
+            <a href="../index.html" class="arrow">
                 <i class="fa-solid fa-arrow-left fa-lg" style="color: #000000;"></i></a>
-            <img src="images/logo/ohmyfood.png" alt="Logo Oh My Food" width="170" height="28">
+            <img src="../images/logo/ohmyfood.png" alt="Logo Oh My Food" width="170" height="28">
         </div>
     </header>
     <main>
-        <img class="backImg" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo accueil La palette du goût">
+        <img class="backImg" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo accueil La note enchantée">
         <section class="restosName">
-            <div class="restosHead">La palette du goût
+            <div class="restosHead">La note enchantée
                 <div class="heartIcon">
-                    <i class="fa-regular fa-heart fa-xl emptyHeart"></i>
-                    <i class="fa-solid fa-heart fa-xl filledHeart"></i>
+                    <i class="fa-regular fa-heart emptyHeart"></i>
+                    <i class="fa-solid fa-heart filledHeart"></i>
                 </div>
             </div>
             <div class="allMenu">
@@ -35,34 +40,48 @@
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Fricassée d'escargots</h3>
-                                <p class="dishesSpec">Au piment d'Espelette</p>
+                                <h3 class="dishesName">Ravioles de foie gras</h3>
+                                <p class="dishesSpec">Accompagnées de leur crème à la truffe</p>
                             </div>
                             <p class="dishesPrice">25€</p>
                             <div class="menuSelect">
-                                <i class="fa-regular fa-circle-check iconCheck"></i>
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
                             </div>
                         </div>
-                        
                     </article>
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Foie gras de canard mi-cuit</h3>
-                                <p class="dishesSpec">Et ses copeaux de truffe noire</p>
+                                <h3 class="dishesName">Caviar osciètre</h3>
+                                <p class="dishesSpec">Sur blini à la farine de blé noir</p>
                             </div>
                             <p class="dishesPrice">35€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
                         </div>
                     </article>
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Œuf au plat</h3>
-                                <p class="dishesSpec">Assaisonné à la truffe sur lit de caviar</p>
+                                <h3 class="dishesName">Homard et espuma de potiron</h3>
+                                <p class="dishesSpec">Marinés aux zestes d'orange</p>
                             </div>
                             <p class="dishesPrice">20€</p>
                             <div class="menuSelect">
-                                <span><i class="fa-regular fa-circle-check iconCheck"></i></span>
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="menuChoices">
+                        <div class="dishesCard">
+                            <div class="dishesInfo">
+                                <h3 class="dishesName">Foie gras de canard entier</h3>
+                                <p class="dishesSpec">Confiture de figue et pain toasté</p>
+                            </div>
+                            <p class="dishesPrice">35€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
                             </div>
                         </div>
                     </article>
@@ -72,28 +91,37 @@
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Filet de bœuf aux herbes</h3>
-                                <p class="dishesSpec">Accompagné de sa ribambelle de légumes</p>
+                                <h3 class="dishesName">Noix de coquille Saint-Jacques</h3>
+                                <p class="dishesSpec">Sur lit de purée de céleri-rave</p>
                             </div>
                             <p class="dishesPrice">40€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
                         </div>
                     </article>
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Parmentier de queue de bœuf</h3>
-                                <p class="dishesSpec">À la truffe noire sur sa purée de panais</p>
+                                <h3 class="dishesName">Langoustine poêlée</h3>
+                                <p class="dishesSpec">Purée de patate douce</p>
                             </div>
                             <p class="dishesPrice">35€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
                         </div>
                     </article>
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Filet de turbot</h3>
-                                <p class="dishesSpec">Aux agrumes</p>
+                                <h3 class="dishesName">Mijoté de queue de bœuf</h3>
+                                <p class="dishesSpec">Et riz sauvage aux zestes de citron</p>
                             </div>
-                            <p class="dishesPrice">44€</p>
+                            <p class="dishesPrice">45€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
                         </div>
                     </article>
                 </section>
@@ -102,28 +130,37 @@
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Paris-Brest</h3>
-                                <p class="dishesSpec">revisité</p>
+                                <h3 class="dishesName">Macaron noisette et chocolat</h3>
+                                <p class="dishesSpec">Glace au caramel brun et sel de Guérande</p>
                             </div>
                             <p class="dishesPrice">18€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
                         </div>
                     </article>
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Macarons au chocolat d'exception</h3>
-                                <p class="dishesSpec">Et glace à la vanille de Madagascar</p>
+                                <h3 class="dishesName">Baba au rhum revisité</h3>
+                                <p class="dishesSpec">Avec son coulis de citron</p>
                             </div>
                             <p class="dishesPrice">22€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
                         </div>
                     </article>
                     <article class="menuChoices">
                         <div class="dishesCard">
                             <div class="dishesInfo">
-                                <h3 class="dishesName">Mousse au chocolat</h3>
-                                <p class="dishesSpec">Au piment d'Espelette et à la truffe noire</p>
+                                <h3 class="dishesName">Tarte au citron meringuée</h3>
+                                <p class="dishesSpec">Destructurée</p>
                             </div>
                             <p class="dishesPrice">23€</p>
+                            <div class="menuSelect">
+                                <i class="fa-solid fa-circle-check iconCheck"></i>
+                            </div>
                         </div>
                     </article>
                 </section>

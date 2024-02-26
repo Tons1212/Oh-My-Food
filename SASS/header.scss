@@ -1,3 +1,9 @@
+/*****HEADER*****/
+
+header {
+    animation: fadein 1.5s both 300ms;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -13,6 +19,6 @@
     align-items: center;
     .arrow {
         position: absolute;
-        margin-right: 22em;
+        left: 1.5em;
     }
 }

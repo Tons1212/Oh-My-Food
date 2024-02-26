@@ -1,9 +1,12 @@
+/*****FOOTER*****/
+
 footer {
     padding: 1em 1.5em;
     background-color: #353535;
     color: white;
     display: flex;
     flex-direction: column;
+    animation: fadein 1.5s both 2s;
     .footerTitle { 
         font-family: "Shrikhand", serif;
         font-weight: 300;
