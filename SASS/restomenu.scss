@@ -2,7 +2,7 @@
 
 .backImg {
     width: 100%;
-    max-height: 20em;
+    height: 250px;
     object-fit: cover;
     animation: fadein 1.5s both 400ms;    
 }
@@ -19,12 +19,15 @@
     .restosHead {
         display: flex;
         justify-content: space-between;
-        width: 100%;
         font-family: "Shrikhand", serif;
         font-size: 28px;
+        max-width: 500px;
+        margin: auto;
         margin-top: 1em;
         margin-bottom: 1.5em;
         animation: appear 1.5s both 500ms;
+        
+        
     }
     .heartIcon i {
         position: absolute;
@@ -45,6 +48,8 @@
     .allMenu {
         display: grid;
         gap: 3em;
+        max-width: 500px;
+        margin: auto;
     }
     .menuBlock {
         display: flex;
@@ -57,7 +62,7 @@
         font-weight: 300;
         padding-bottom: 0.5em;
         border-bottom: 3px solid #99E2D0;
-        width: 10%;
+        max-width: 40px;
         animation: appear 1.5s both 800ms;
     }
     .menuChoices {
@@ -128,10 +133,41 @@
         width: 60%;
         height: 50px;
         box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-        animation: appear 1.5s both 1500ms;
+        animation: fadein 1.5s both 1500ms;
+        cursor: pointer;
     }
     .mainButtonPurple:hover {
         filter: brightness(1.1);
         transition: 0.3s;
+        transform: scale(1.10);
+    }
+}
+
+@media (min-width: 767.98px) {
+    .backImg {
+        position: fixed;
+        height: 100%;
+    }
+    .restosName {
+        width: 60%;
+        margin: auto;
+    }
+    .restosName .restosHead {
+        width: 60%;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        justify-content: space-around;
+    }
+    .restosHead .heartIcon {
+        position: relative;
+        top: 0;
+        right: -2.2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .restosName .restosHead {
+        width: 50%;
     }
 }

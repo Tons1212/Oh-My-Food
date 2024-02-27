@@ -62,6 +62,10 @@ header {
   height: 4em;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
 }
+.header img {
+  width: 25%;
+  height: 25px;
+}
 
 .headerBack {
   display: flex;
@@ -74,6 +78,15 @@ header {
   left: 1.5em;
 }
 
+@media (min-width: 767.98px) {
+  .header {
+    height: 5em;
+  }
+  .header img {
+    height: 35px;
+    max-width: 15%;
+  }
+}
 /*****LOADER*****/
 .loaderWrap {
   position: absolute;
@@ -139,15 +152,19 @@ header {
   border-radius: 30px;
   background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
   color: white;
+  font-size: 20px;
   margin: 1em auto 2.5em;
+  padding: 0.2em;
   width: 60%;
   height: 50px;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
   animation: fadein 1.5s both 600ms;
+  cursor: pointer;
 }
 .intro .mainButtonPurple:hover {
   filter: brightness(1.1);
   transition: 0.3s;
+  transform: scale(1.1);
 }
 
 /*****FONCTIONALITE*****/
@@ -217,6 +234,7 @@ header {
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
   animation: appear 2s both 1200ms;
+  margin-bottom: 15px;
 }
 .restos .restosList2 {
   position: relative;
@@ -224,6 +242,7 @@ header {
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
   animation: appear 2s both 1300ms;
+  margin-bottom: 15px;
 }
 .restos .restosList3 {
   position: relative;
@@ -231,6 +250,7 @@ header {
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
   animation: appear 2s both 1400ms;
+  margin-bottom: 15px;
 }
 .restos .restosList4 {
   position: relative;
@@ -238,6 +258,7 @@ header {
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
   animation: appear 2s both 1500ms;
+  margin-bottom: 25px;
 }
 .restos .restosdetail {
   display: flex;
@@ -253,14 +274,14 @@ header {
 }
 .restos .tag {
   background-color: #a9e0d1;
-  color: #3b8468;
+  color: #0c1813;
   position: absolute;
   padding: 0.5em 1em;
   border-radius: 0.2em;
   font-weight: 500;
   top: 1em;
   right: 0.8em;
-  animation: tag 500ms 0ms linear alternate infinite both;
+  animation: tag 800ms 0ms linear alternate infinite both;
 }
 .restos .restosInfos {
   padding: 1em;
@@ -286,10 +307,86 @@ header {
   opacity: 1;
 }
 
+/*****MEDIA-QUERIES-TABLET*****/
+@media (min-width: 767.98px) {
+  .intro {
+    border-radius: 0 0 25px 25px;
+  }
+  .mainButtonPurple {
+    max-width: 30%;
+  }
+  .function h1 {
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  .function .steps {
+    flex-direction: row;
+    gap: 25px;
+    padding-left: 5px;
+  }
+  .restos {
+    border-radius: 25px 25px 0 0;
+  }
+  .restosTitle {
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  .cardTablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .restosList {
+    width: 48%;
+  }
+  .restosList2 {
+    width: 48%;
+  }
+  .restosList3 {
+    width: 48%;
+    height: 350px;
+  }
+  .restosList4 {
+    width: 48%;
+  }
+  .restos .restosCard img {
+    height: 270px;
+  }
+}
+/*****MEDIA-QUERIES-DESKTOP*****/
+@media (min-width: 1024px) {
+  .intro {
+    border-radius: 0;
+  }
+  nav {
+    border-bottom: 1px solid #FF79DA;
+  }
+  .function-and-restos {
+    display: flex;
+  }
+  .function {
+    background-color: whitesmoke;
+    width: 25%;
+    justify-content: center;
+    border-right: 1px solid #FF79DA;
+  }
+  .function h1 {
+    margin-top: 0;
+  }
+  .function .steps {
+    flex-direction: column;
+  }
+  .restos {
+    width: 75%;
+    border-radius: 0;
+  }
+}
 /*****PRESENTATION*****/
 .backImg {
   width: 100%;
-  max-height: 20em;
+  height: 250px;
   object-fit: cover;
   animation: fadein 1.5s both 400ms;
 }
@@ -306,9 +403,10 @@ header {
 .restosName .restosHead {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   font-family: "Shrikhand", serif;
   font-size: 28px;
+  max-width: 500px;
+  margin: auto;
   margin-top: 1em;
   margin-bottom: 1.5em;
   animation: appear 1.5s both 500ms;
@@ -332,6 +430,8 @@ header {
 .restosName .allMenu {
   display: grid;
   gap: 3em;
+  max-width: 500px;
+  margin: auto;
 }
 .restosName .menuBlock {
   display: flex;
@@ -344,7 +444,7 @@ header {
   font-weight: 300;
   padding-bottom: 0.5em;
   border-bottom: 3px solid #99E2D0;
-  width: 10%;
+  max-width: 40px;
   animation: appear 1.5s both 800ms;
 }
 .restosName .menuChoices {
@@ -415,13 +515,42 @@ header {
   width: 60%;
   height: 50px;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-  animation: appear 1.5s both 1500ms;
+  animation: fadein 1.5s both 1500ms;
+  cursor: pointer;
 }
 .restosName .mainButtonPurple:hover {
   filter: brightness(1.1);
   transition: 0.3s;
+  transform: scale(1.1);
 }
 
+@media (min-width: 767.98px) {
+  .backImg {
+    position: fixed;
+    height: 100%;
+  }
+  .restosName {
+    width: 60%;
+    margin: auto;
+  }
+  .restosName .restosHead {
+    width: 60%;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    justify-content: space-around;
+  }
+  .restosHead .heartIcon {
+    position: relative;
+    top: 0;
+    right: -2.2em;
+  }
+}
+@media (min-width: 1024px) {
+  .restosName .restosHead {
+    width: 50%;
+  }
+}
 /*****FOOTER*****/
 footer {
   padding: 1em 1.5em;
@@ -446,6 +575,18 @@ footer .iconWhite {
   margin-right: 5px;
 }
 
+/*****MEDIA-QUERIES-TABLET*****/
+@media (min-width: 767.98px) {
+  .footerTitle {
+    display: flex;
+    justify-content: center;
+  }
+  footer .footerLink {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 /*****GENERAL*****/
 body {
   margin: 0;

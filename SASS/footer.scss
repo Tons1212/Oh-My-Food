@@ -22,3 +22,17 @@ footer {
         margin-right: 5px;
     }
 }
+
+/*****MEDIA-QUERIES-TABLET*****/
+
+@media (min-width: 767.98px) {
+    .footerTitle {
+        display: flex;
+        justify-content: center;
+    }
+    footer .footerLink {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
