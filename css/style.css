@@ -448,6 +448,7 @@ header {
   animation: appear 1.5s both 800ms;
 }
 .restosName .menuChoices {
+  display: flex;
   background-color: white;
   border-radius: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -459,12 +460,18 @@ header {
 }
 .restosName .dishesCard {
   display: flex;
+  justify-content: space-between;
+  flex: 1;
+  overflow: hidden;
 }
 .restosName .dishesInfo {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
   padding: 0.7em;
+  flex: 1;
 }
 .restosName .dishesName {
   margin: 2px;
@@ -491,6 +498,7 @@ header {
   background-color: #99E2D0;
   width: 0;
   opacity: 0;
+  height: auto;
   border-radius: 0 15px 15px 0;
   display: flex;
   justify-content: center;
