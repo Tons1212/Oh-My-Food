@@ -6,7 +6,7 @@ footer {
     color: white;
     display: flex;
     flex-direction: column;
-    animation: fadein 1.5s both 2s;
+    animation: fadein 1.5s both 1s;
     .footerTitle { 
         font-family: "Shrikhand", serif;
         font-weight: 300;
@@ -26,13 +26,28 @@ footer {
 /*****MEDIA-QUERIES-TABLET*****/
 
 @media (min-width: 767.98px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1em 1.5em 0;
+    }
+    .footerDesktop {
+        display: flex;
+        order: 2;
+        padding: 1em 0 1em 5em;
+    }
     .footerTitle {
         display: flex;
-        justify-content: center;
+        justify-items: center;
     }
     footer .footerLink {
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 0;
+        a {
+            margin-left: 20px;
+        }
     }
 }
